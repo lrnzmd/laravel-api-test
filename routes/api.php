@@ -10,7 +10,9 @@ Route::get('product/{id}/show', [ProductController::class, 'show']);
 
 Route::post('product/add', [ProductController::class, 'store']);
 
-Route::put('product/{id}/update', [ProductController::class, 'update']);
+//Route::put('product/{id}/update', [ProductController::class, 'update']);
+Route::post('product/{id}/update', [ProductController::class, 'update']);
+
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
